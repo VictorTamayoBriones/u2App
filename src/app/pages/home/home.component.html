@@ -1,0 +1,29 @@
+<h1>YouTube Videos</h1>
+<hr>
+
+<div class="row center">
+    <div class="col s12">
+      <div class="card col s3" *ngFor="let video of videos" > 
+        <div class="card-image">
+          <img [src]="video.thumbnails.high.url">
+        </div>
+        <div class="card-content">
+          <p class="card-title">{{video.title}}</p>
+          
+          <strong>Autor: </strong>{{video.channelTitle}}
+            <br>
+          <strong>Publicado: </strong>{{video.publishedAt | date}}
+        </div>
+        <div class="card-action">
+            <a class="waves-effect waves-light btn red darken-1 col s12">Ver video</a>
+            <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+          <a class="waves-effect waves-light btn-large red darken-1  col s12">Ver mas videos</a>
+      </div>
+  </div>
